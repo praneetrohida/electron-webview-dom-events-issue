@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#webviews {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+}
+
+webview {
+  height: 600px;
+  width: 400px;
+  margin: 20px;
+}
