@@ -11,8 +11,9 @@
         const ipc = window.require("electron").ipcRenderer;
         const webviews = document.querySelectorAll("webview");
         webviews.forEach(webviewEl => {
-          const webContents = webviewEl.getWebContents();
-          ipc.sendTo(webContents.id, "scroll-to-end");
+          // webviewEl.openDevTools()
+          const webContentsId = webviewEl.getWebContentsId();
+          ipc.sendTo(webContentsId, "scroll-to-end");
         });
       }
     </script>
